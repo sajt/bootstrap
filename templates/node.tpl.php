@@ -1,4 +1,4 @@
-﻿<?php if ($page): // Node template if your displaying the page ?>
+<?php if ($page): // Node template if your displaying the page ?>
 
   <?php if ($unpublished): ?>
     <div class="unpublished"><?php print t('Unpublished'); ?></div>
@@ -47,7 +47,7 @@
   </div>
 
   <?php print $links; ?>
-  
+
 </article>
 <?php endif; ?>
 

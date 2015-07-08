@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 function bootstrap_settings($saved_settings) {
 	$defaults = array(

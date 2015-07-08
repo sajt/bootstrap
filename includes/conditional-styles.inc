@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // The code for conditional stylesheets started out as a patch for Zen. Now that
 // it has been spun out to its own separate module, It would be nice to prevent
 // code drift between the Zen implementation and the conditional_styles.module,

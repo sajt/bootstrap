@@ -1,4 +1,4 @@
-﻿<div class="<?php print $classes; ?>">
+<div class="<?php print $classes; ?>">
 
   <?php if ($block->subject): ?>
     <h2 class="title"><?php print $block->subject; ?></h2>

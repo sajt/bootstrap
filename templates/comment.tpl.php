@@ -1,4 +1,4 @@
-﻿<div class="comment row<?php print ($comment->new) ? ' comment-new' : ''; print ' '. $status; print ' '. $zebra; ?>">
+<div class="comment row<?php print ($comment->new) ? ' comment-new' : ''; print ' '. $status; print ' '. $zebra; ?>">
   <div class="col-sm-3 col-md-2 align-r">
     <?php print $picture ?><br>
     <strong><?php print $author; ?></strong><br>

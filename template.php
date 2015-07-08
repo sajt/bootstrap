@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // $Id$
 
 /**
@@ -14,10 +14,7 @@ include_once(drupal_get_path('theme', 'bootstrap') . '/includes/theme.inc');
 if (is_null(theme_get_setting('bootstrap'))) {
   global $theme_key;
 
-  /*
-   * The default values for the theme variables. Make sure $defaults exactly
-   * matches the $defaults in the theme-settings.php file.
-   */
+
   $defaults = array(
     'layout_front_display_page_title' => 1,
     'layout_front_display_page_content' => 1,
@@ -243,7 +240,7 @@ function bootstrap_contact_buttons(&$vars) {
   $vars['company_phone'] = $company_phone;
   $vars['site_mail'] = $site_mail;
 
-  $vars['mobile_contact_btns_icons'] = theme_get_setting('mobile_contact_btns_icons');
+  //$vars['mobile_contact_btns_icons'] = theme_get_setting('mobile_contact_btns_icons');
 
   if (!empty($company_phone) || !empty($site_mail)) {
     $mobile_contact_utilities = '<div class="container contact-details visible-xs">';
@@ -267,7 +264,7 @@ function bootstrap_contact_buttons(&$vars) {
     $mobile_contact_utilities .= '</div>';
 
 
-    $vars['mobile_contact_utilities'] = $mobile_contact_utilities;
+    //$vars['mobile_contact_utilities'] = $mobile_contact_utilities;
     return $vars;
   }
 }
@@ -633,7 +630,6 @@ function bootstrap_preprocess_block(&$vars, $hook) {
   // Special classes for blocks.
   $classes = array('block');
   $classes[] = 'block-' . $block->module;
-  $classes[] .= block_class($block);
 
   $vars['edit_links_array'] = array();
 

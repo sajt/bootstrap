@@ -1,26 +1,27 @@
-﻿<!doctype HTML>
-<html class="no-js">
-<head>
-  <title><?php print $head_title; ?></title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width,user-scalable=no" />
-  <?php print $head; ?>
-  <?php print $styles; ?>
-  <?php print $scripts; ?>
-  <?php print $bootstrap_touch_icons; ?>
-   <!--[if lt IE 9]>
-  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-   <!--[if lt IE 9]>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
-  <![endif]-->
-  
-  <!--[if lt IE 9]>
-  <meta http-equiv="X-UA-Compatible" content="IE=9">
-  <![endif]-->
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title><?php print $head_title; ?></title>
+    <?php print $head; ?>
+    <?php print $styles; ?>
+    <?php print $scripts; ?>
+    <?php print $bootstrap_touch_icons; ?>
+     <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+     <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <![endif]-->
 </head>
 <body class="<?php print $body_classes; ?>">
-
   <header id="header" class="hidden-xs">
 		<div class="container">
 			<div class="logo pull-left">
@@ -49,7 +50,7 @@
       <?php }; ?>
 		</div>
 	</header>
-  
+
   <nav id="primary-links" class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="row">
@@ -65,7 +66,7 @@
             <img src="/<?php print $mobile_logo_path; ?>" alt="<?php print $site_name; ?> logo">
           <?php } else { ?>
             <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?> logo">
-          <?php }; ?>          
+          <?php }; ?>
           </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -80,22 +81,22 @@
             <a type="button" class="btn btn-default" href="/user/register">Register</a>
             <?php } ?>
           </div>
-          <?php print theme('links', $primary_links, array('class' => 'primary-links'), 'primary-links'); ?>          
+          <?php print theme('links', $primary_links, array('class' => 'primary-links'), 'primary-links'); ?>
         </div>
       </div>
     </div>
   </nav>
-  
+
   <?php print $mobile_contact_utilities; ?>
-  
-  
-  
+
+
+
   <?php if ($banner) {
     print '<div class="jumbotron"><div class="container">';
       print $banner;
     print '</div></div>';
    } ?>
-   
+
   <?php
     // Desktop and tablet breadcrumbs
   if ($breadcrumb) {
@@ -103,7 +104,7 @@
       print $breadcrumb;
     print '</div>';
   } ?>
-  
+
   <?php
   // Mobile breadcrumbs
   if ($breadcrumb || ($left && $layout_front_offcanvas_sidebar == FALSE)) {
@@ -119,55 +120,55 @@
       };
     print '</div>';
   } ?>
-    
-  
-   
-  <?php if ($messages){
-    print '<div class="container">';
-      print $messages;
-    print '</div>';
-  } ?>
-  
+
+
+
+  <?php if ($messages): ?>
+    <div class="container">
+      <?php print $messages; ?>
+    </div>
+  <?php endif; ?>
+
   <section id="offcanvas-container" class="container">
     <div id="main"<?php print $css_main; ?>>
-    
-			<article id="content-area"<?php print $css_content; ?>>
-				<?php print $content_top; ?>
-        
+
+      <article id="content-area"<?php print $css_content; ?>>
+        <?php print $content_top; ?>
+
         <?php if (!$is_front || $layout_front_display_page_title == TRUE) { ?>
           <h1><?php print $title; ?></h1>
           <?php print $tabs; ?>
         <?php }; ?>
-        
+
         <?php if (!$is_front || $layout_front_display_page_content == TRUE) { ?>
           <?php print $content; ?>
         <?php }; ?>
         <div class="row">
-				<?php print $content_bottom; ?>
+        <?php print $content_bottom; ?>
         </div>
-			</article>
-      
+      </article>
+
       <?php if ($right) { ?>
 			<aside<?php print $css_right; ?>>
 				<?php print $right; ?>
 			</aside>
       <?php } ?>
-      
+
       <?php if ($left) { ?>
 			<aside id="sidebar-left" role="navigation"<?php print $css_left; ?>>
 				<?php print $left; ?>
 			</aside>
       <?php } ?>
-      
+
 		</div>
-    
+
     <?php print $bottom; ?>
-    
+
   </section>
-  
-  
-   
-  
+
+
+
+
   <footer>
     <?php if ($footer) { ?>
 		<div id="footer-top">
@@ -178,7 +179,7 @@
 			</div>
 		</div>
     <?php }; ?>
-    
+
     <?php if ($secondary_links || $closure_blocks) { ?>
 		<div id="footer-bottom">
 			<div class="container">
@@ -188,10 +189,10 @@
 		</div>
     <?php }; ?>
   </footer>
-    
-     
+
+
   <?php print $modal; ?>
-  
+
   <!-- Modal Search -->
   <div class="modal fade" id="modalsearch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -206,10 +207,10 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
-  
-  
-  
-  
+
+
+
+
   <?php print $closure; ?>
   <script>
 		$(document).ready(function() {
@@ -218,7 +219,7 @@
 				$('.row-offcanvas').toggleClass('active');
 			});
 		});
-	</script>   
-  
+	</script>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // $Id: template.block-editing.inc,v 1.1.2.2 2009/02/13 07:34:31 johnalbin Exp $
 
 /**
